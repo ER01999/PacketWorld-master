@@ -207,6 +207,19 @@ public class Perception {
         return Math.abs(ap2.getY() - ap1.getY()) + Math.abs(ap2.getX() - ap1.getX());
     }
 
+    /**
+     *  Returns the optimal distance between 2 CellPerceptions
+     *
+     * @param ap1 the first CellPerception
+     * @param ap2 the second CellPerception
+     * @return    the optimal distance between the two CellPerceptions
+     */
+    public static int OptimalDistance(CellPerception ap1, CellPerception ap2) {
+        int minStepsDiagonal = Math.min(Math.abs(ap2.getY() - ap1.getY()), Math.abs(ap2.getX() - ap1.getX()));
+        int stepsStraight = Math.abs(Math.abs(ap2.getY() - ap1.getY()) - Math.abs(ap2.getX() - ap1.getX()));
+        return minStepsDiagonal + stepsStraight;
+    }
+
     //--------------------------------------------------------------------------
     //		MUTATORS
     //--------------------------------------------------------------------------
