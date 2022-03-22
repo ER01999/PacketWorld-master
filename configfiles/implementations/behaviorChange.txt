@@ -1,0 +1,23 @@
+description "Example of different behaviors and changes between behaviors"
+
+nbStates 2 # 2 behavior states
+
+1 agent.behavior.SimpleBehavior # First behavior
+nbArgs 0 # Constructor with no args
+2 agent.behavior.BasicComplexity # Second behavior
+nbArgs 0 # // (no arguments)
+
+nbChanges 2
+
+# First change, from behavior with ID 1 to behavior with ID 2
+agent.behavior.basic.change.ConditionOne
+nbArgs 0 # The constructor of ConditionOne takes 0 args
+priority 0 # Higher value −> higher priority (in case of multiple is satisfied change conditions from current behavior state)
+
+source 1 # ID of starting behavior
+target 2 # ID of resulting behavior
+agent.behavior.basic.change.ConditionTwo
+nbArgs 0
+priority 0
+source 2
+target 1

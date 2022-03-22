@@ -82,7 +82,7 @@ public class BasicComplexity extends Behavior {
     }
 
     //Returns the coordinates for the best move to get a box
-    public Coordinate getBestCoordinateMoveBox(AgentState agentState, AgentAction agentAction) {
+    private Coordinate getBestCoordinateMoveBox(AgentState agentState, AgentAction agentAction) {
         var perception = agentState.getPerception();
         int height = perception.getHeight();
         int width = perception.getWidth();
@@ -115,7 +115,7 @@ public class BasicComplexity extends Behavior {
     }
 
     //Returns the coordinates for the best move to go to a destination
-    public Coordinate getBestCoordinateMoveDestination(AgentState agentState, AgentAction agentAction) {
+    private Coordinate getBestCoordinateMoveDestination(AgentState agentState, AgentAction agentAction) {
         var perception = agentState.getPerception();
         int height = perception.getHeight();
         int width = perception.getWidth();
